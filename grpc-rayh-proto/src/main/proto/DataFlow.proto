@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.rayh.examples.grpc";
+option java_outer_classname = "HelloWorldProto";
+
+service Simple {
+    rpc SayHello (DataFlowRequest) returns (DataFlowMessage) {
+    }
+}
+
+// The request message containing the user's name.
+message DataFlowRequest {
+    string name = 1;
+}
+
+// The response message containing the greetings
+message DataFlowMessage {
+    string message = 1;
+}syntax = "proto3";
+
+ option java_multiple_files = true;
+ option java_package = "net.devh.boot.grpc.examples.lib";
+ option java_outer_classname = "DataFlowProto";
+
+ // The DataFlowMessage service definition.
+ service DataFlowService {
+     // Sends a message
+     rpc RequestFlow (RequestMessage) returns (stream DataFlowMessage) { }
+ }
+
+ // The request message containing the user's name.
+ message RequestMessage {
+     string name = 1;
+ }
+
+ // The response message containing the response
+ message ResponseMessage {
+     string message = 1;
+ }
