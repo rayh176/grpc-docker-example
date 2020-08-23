@@ -18,7 +18,7 @@ public class GrpcClient {
 
         HelloResponse helloResponse = stub.hello(HelloRequest.newBuilder()
             .setFirstName("Ryan")
-            .setLastName("ZKB")
+            .setLastName("ZZZ")
             .build());
 
         System.out.println("Response received from server:\n" + helloResponse);
