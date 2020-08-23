@@ -19,6 +19,7 @@
     </properties>
     <modules>
         <module>grpc-example</module>
+        <module>grpc-boots-example</module>
 	    <module>grpc-rayh-common</module>
         <module>grpc-rayh-proto</module>
         <module>grpc-rayh-server</module>
