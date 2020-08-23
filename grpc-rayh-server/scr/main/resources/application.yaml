@@ -1,0 +1,12 @@
+grpc:
+  server:
+    port: 8282
+
+server:
+  instance:
+      hostname: peer1
+  port: 8761
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
